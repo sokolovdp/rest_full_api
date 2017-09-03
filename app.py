@@ -23,10 +23,11 @@ api.add_resource(UserRegister, '/signup')
 if __name__ == '__main__':
     from db_alchemy import db
 
+    db.init_app(app)
     @app.before_first_request
     def create_tables():
         db.create_all()
 
-    db.init_app(app)
 
-    app.run(port=8000, debug=True)
+
+    app.run(port=5000, debug=True)
