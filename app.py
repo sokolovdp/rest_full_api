@@ -28,6 +28,4 @@ if __name__ == '__main__':
     def create_tables():
         db.create_all()
 
-
-
     app.run(port=5000, debug=True)
