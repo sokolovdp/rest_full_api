@@ -1,0 +1,9 @@
+#ignore subfolders
+__pycache__/
+.idea/
+old_versions/
+
+#files
+*.bat
+*.db
+*.bak
