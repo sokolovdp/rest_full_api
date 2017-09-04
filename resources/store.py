@@ -5,6 +5,11 @@ from flask_sqlalchemy import sqlalchemy
 from sqlalchemy import exc
 
 
+# from flask_jwt import JWTError
+# @app.errorhandler(JWTError)
+# def on_auth_error():
+#     return jsonify({'message': 'There was an error with your JWT token!'}), 401
+
 class Store(Resource):
     method_decorators = [jwt_required()]
 
