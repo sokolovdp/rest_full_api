@@ -6,6 +6,7 @@ from sqlalchemy import exc
 
 
 class Item(Resource):
+    method_decorators = [jwt_required()]
     parser = reqparse.RequestParser()
     parser.add_argument('price',
                         type=float,

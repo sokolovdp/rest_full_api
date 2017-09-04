@@ -6,6 +6,7 @@ from sqlalchemy import exc
 
 
 class Store(Resource):
+    method_decorators = [jwt_required()]
     parser = reqparse.RequestParser()
     parser.add_argument('name',
                         type=str,
