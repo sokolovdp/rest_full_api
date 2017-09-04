@@ -47,6 +47,8 @@ class Store(Resource):
 
 
 class StoreList(Resource):
+    method_decorators = [jwt_required()]
+
     @jwt_required()
     def get(self):
         return {'stores': [store.json() for store in StoreModel.get_all_stores()]}
